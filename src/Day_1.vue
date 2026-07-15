@@ -6,7 +6,7 @@ const github="https://github.com/appspirelearner/vue-day-01"
 </script>
 
 <template>
-  <main class="Dtails">
+  <main class="container">
    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png"alt="githubLog"
     width="100"
     />
