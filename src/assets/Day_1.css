@@ -1,0 +1,33 @@
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  text-align: center;
+  background-color: lightblue;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+}
+
+a {
+  color: #42b883;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  margin-bottom: 1rem;
+}
+
+
+h1 {
+  color: #42b883;
+}
+
+footer {
+  margin-top: 40px;
+  font-weight: bold;
+}

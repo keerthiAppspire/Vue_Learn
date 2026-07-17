@@ -1,4 +1,5 @@
 <script setup>
+import "./Day_1.css";
 import MySkills from "./components/MySkills.vue"
 const developer = "keerthi"
 const role = 'Intern'
@@ -27,7 +28,7 @@ const today = new Date().toLocaleDateString()
   </main>
 </template>
 
-<style scoped>
+<!-- <style scoped>
 .container {
   max-width: 600px;
   margin: 40px auto;
@@ -60,4 +61,4 @@ footer {
   margin-top: 40px;
   font-weight: bold;
 }
-</style>
+</style> -->
