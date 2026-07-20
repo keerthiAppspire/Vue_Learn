@@ -1,47 +1,49 @@
 <script setup>
-import { ref, computed } from 'vue'
+import {reactive , ref, computed } from 'vue'
 
-const name = ref('Keerthi')
-const role = ref('intern')
-const isOnline = ref(true)
-const skills = ref(['Vue', 'TypeScript', 'Tailwind','html','css'])
+const profile = reactive({
+  name: 'Keerthi',
+  role: 'Intern',
+  status: true,
+  skills: ['Vue', 'TypeScript','HTML', 'CSS', 'javascript','vue.js']
+})
 const newSkill = ref('')
 
 const statusClass = computed(() => ({
-  'status-online': isOnline.value,
-  'status-offline': !isOnline.value
+  'status-online': profile.status,
+  'status-offline': !profile.status
 }))
 
 function addSkill() {
   if (newSkill.value.trim()) {
-    skills.value.push(newSkill.value.trim())
+    profile.skills.push(newSkill.value.trim())
     newSkill.value = ''
   }
 }
 
 function removeSkill(index) {
-  skills.value.splice(index, 1)
+  profile.skills.splice(index, 1)
 }
 </script>
 
 <template>
   <article class="card">
     <header>
-      <h2>{{ name }}</h2>
+      <h2>{{ profile.name }}</h2>
       <span :class="statusClass">
-        {{ isOnline ? '● Online' : '○ Offline' }}
+        {{ profile.status ? '● Online' : '○ Offline' }}
       </span>
     </header>
 
-    <p>{{ role }}</p>
+    <p>{{ profile.role }}</p>
 
-    <button @click="isOnline = !isOnline">
+    <button @click="profile.status = !profile.status">
       Toggle Status
     </button>
 
     <h3>Skills</h3>
     <ul>
-      <li v-for="(skill, index) in skills" :key="skill">
+      <li v-for="(skill, index) in profile.skills" :key="skill">
         {{ skill }}
         <button @click="removeSkill(index)">×</button>
       </li>
