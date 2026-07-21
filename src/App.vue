@@ -1,8 +1,10 @@
 <script setup>
-import Day_3 from "./Day_3.vue";
+import SearchBox from './components/SearchBox.vue';
+import ShoppingCart from './components/ShoppingCart.vue';
 
 </script>
 
 <template>
-  <Day_3 />
+  <SearchBox />
+  <ShoppingCart />
 </template>

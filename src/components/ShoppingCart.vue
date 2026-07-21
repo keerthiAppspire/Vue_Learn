@@ -5,7 +5,7 @@ const products = ref([
   { id: 1, name: 'Vue T-shirt', price: 25 },
   { id: 2, name: 'Vite Mug', price: 12 },
   { id: 3, name: 'Pinia Sticker', price: 4 },
-  { id: 4, name: 'shirt', price: 100 }
+  { id: 4, name: 'shirt', price: 500 }
 
 ])
 
@@ -47,7 +47,7 @@ watch(
       <h2>Products</h2>
       <article v-for="p in products" :key="p.id" class="product">
         <h3>{{ p.name }}</h3>
-        <p>₹{{ p.price }}</p>
+        <p>${{ p.price }}</p>
         <button @click="addToCart(p)">Add to cart</button>
       </article>
     </div>
@@ -68,8 +68,8 @@ watch(
         <input type="number" v-model.number="cart.discount" step="0.1" min="0" max="1" />
       </label>
 
-      <p>Subtotal: ₹{{ subtotal.toFixed(2) }}</p>
-      <p><strong>Total: ₹{{ total.toFixed(2) }}</strong></p>
+      <p>Subtotal: ${{ subtotal.toFixed(2) }}</p>
+      <p><strong>Total: ${{ total.toFixed(2) }}</strong></p>
     </aside>
   </section>
 </template>
