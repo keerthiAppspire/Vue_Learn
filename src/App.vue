@@ -1,10 +1,10 @@
 <script setup>
-import SearchBox from './components/SearchBox.vue';
-import ShoppingCart from './components/ShoppingCart.vue';
+import TodoList from './Daily_Tasks/Day2/TodoList.vue';
 
+import AnimatedTaskBoard from './components/AnimatedTaskBoard.vue';
 </script>
 
 <template>
-  <SearchBox />
-  <ShoppingCart />
+  <TodoList />
+  <AnimatedTaskBoard />
 </template>
