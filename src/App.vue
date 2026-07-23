@@ -1,10 +1,7 @@
 <script setup>
-import TodoList from './Daily_Tasks/Day2/TodoList.vue';
-
-import AnimatedTaskBoard from './components/AnimatedTaskBoard.vue';
+import Day_6 from './Daily_Tasks/Day_6.vue';
 </script>
 
 <template>
-  <TodoList />
-  <AnimatedTaskBoard />
+    <Day_6 />
 </template>
