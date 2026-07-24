@@ -2,3 +2,10 @@ button{
     display: block;
     margin : 10px 0;
 }
+input{
+    margin-bottom: 10px;
+}
+
+
+.signup { display: flex; flex-direction: column; gap: 1rem; max-width: 420px; }
+small { color: #dc2626; }
